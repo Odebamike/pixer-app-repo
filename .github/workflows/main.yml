@@ -19,7 +19,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd ~/your-app-folder
+          cd ~/pixer-app
           git pull origin main
           docker build -t pixer-app .
           docker stop your_container || true
