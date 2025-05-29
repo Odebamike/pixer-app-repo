@@ -22,6 +22,6 @@ jobs:
           cd ~/pixer-app
           git clone https://github.com/Odebamike/pixer-app-repo.git
           sudo docker build -t pixer-app .
-          sudo docker stop your_container || true
-          sudo docker rm your_container || true
+          sudo docker stop pixer || true
+          sudo docker rm pixer || true
           sudo docker run -d -p 8080:80 --name pixer pixer-app
