@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           cd ~/pixer-app
-          git pull origin main
+          git clone https://github.com/Odebamike/pixer-app-repo.git
           docker build -t pixer-app .
           docker stop your_container || true
           docker rm your_container || true
